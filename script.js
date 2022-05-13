@@ -2,26 +2,38 @@ document.getElementById('PlayPrevious').addEventListener('click', PlayPrevious);
 document.getElementById('PlayPause').addEventListener('click', PlayPause);
 document.getElementById('PlayNext').addEventListener('click', PlayNext);
 
-var P = newBoolean(false);
+var play = newBoolean(false);
+var audio = new Audio('./songs/Cage-The-Elephant-Instant-Crush.mp3');
+
+var anchorPoint = 0;
 
 function PlayPause() {
-    if (P == false)
+    if (play == false)
     {
-        document.getElementById('result').innerHTML = 'Play';
-        P = true
+        document.getElementById('playpausestate').innerHTML = 'Play';
+        play = true
     }
     
     else
     {
-        document.getElementById('result').innerHTML = 'Pause';
-        P =  false
+        document.getElementById('playpausestate').innerHTML = 'Pause';
+        play =  false
     }
 }
 
+    if (play = true)
+    {
+
+    }
+
 function PlayPrevious() {
-    document.getElementById('result').innerHTML = 'Previous';
+    --anchorPoint;
+    console.log(anchorPoint);
+    document.getElementById('result').innerHTML = anchorPoint;
 }
 
 function PlayNext() {
-    document.getElementById('result').innerHTML = 'Next';
+    ++anchorPoint;
+    console.log(anchorPoint);
+    document.getElementById('result').innerHTML = anchorPoint;
 }
