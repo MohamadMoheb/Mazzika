@@ -8,13 +8,13 @@ function PlayPause() {
     if (P == false)
     {
         document.getElementById('result').innerHTML = 'Play';
-        P = false
+        P = true
     }
     
     else
     {
         document.getElementById('result').innerHTML = 'Pause';
-        P =  true
+        P =  false
     }
 }
 
