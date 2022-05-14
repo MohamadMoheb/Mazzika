@@ -2,6 +2,8 @@ document.getElementById('PlayPrevious').addEventListener('click', PlayPrevious);
 document.getElementById('PlayNext').addEventListener('click', PlayNext);
 document.getElementById('PlayPause').addEventListener('click', PlayPause);
 
+document.getElementById('loopbtn').addEventListener('click', Loopfn);
+
 var anchorPoint;
 var play;
 
@@ -32,4 +34,9 @@ function PlayPause() {
         play =  false
         anchorPoint = 0
     }
+}
+
+function Loopfn(){
+    console.log("1")
+    recurse();
 }
