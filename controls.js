@@ -2,22 +2,20 @@ document.getElementById('PlayPrevious').addEventListener('click', PlayPrevious);
 document.getElementById('PlayNext').addEventListener('click', PlayNext);
 document.getElementById('PlayPause').addEventListener('click', PlayPause);
 
-document.getElementById('loopbtn').addEventListener('click', Loopfn);
-
-var anchorPoint;
+var trackIndex = 0;
 var play;
 
 
 function PlayPrevious() {
-    --anchorPoint;
+    trackIndex--;
     console.log("Playing Previous Song");
-    document.getElementById('result').innerHTML = anchorPoint;
+    document.getElementById('result').innerHTML = trackIndex;
 }
 
 function PlayNext() {
-    ++anchorPoint;
+    trackIndex++;
     console.log("Playing Next Song");
-    document.getElementById('result').innerHTML = anchorPoint;
+    document.getElementById('result').innerHTML = trackIndex;
 }
 
 function PlayPause() {
@@ -25,18 +23,13 @@ function PlayPause() {
     {
         document.getElementById('playpausestate').innerHTML = 'Play';
         play = true
-        anchorPoint = 0
+        trackIndex = 0
     }
     
     else
     {
         document.getElementById('playpausestate').innerHTML = 'Pause';
         play =  false
-        anchorPoint = 0
+        trackIndex = 0
     }
-}
-
-function Loopfn(){
-    console.log("1")
-    recurse();
 }
