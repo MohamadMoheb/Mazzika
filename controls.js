@@ -6,7 +6,9 @@ var trackIndex = 0;
 var playState;
 var Playlist = {};
 
-var track = new Audio('/songs/Cage The Elepant - Instant Crush.mp3');
+var track1 = new Audio('/songs/Aziz Maraka - Meen Gallek.mp3');
+var track2 = new Audio('/songs/Cage The Elepant - Instant Crush.mp3');
+var track3 = new Audio('/songs/Gorillaz - Souk Eye.mp3');
 
 function PlayPrevious() {
     trackIndex--;
