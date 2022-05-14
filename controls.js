@@ -5,7 +5,7 @@ document.getElementById('PlayPause').addEventListener('click', PlayPause);
 var trackIndex = 0;
 var play;
 
-var audio = new Audio("folder_name/audio_file.mp3");
+var audio = new Audio("/songs/Aziz-Maraka-Meen-Gallek.mp3");
 
 function PlayPrevious() {
     trackIndex--;
@@ -29,6 +29,8 @@ function PlayPause() {
     {
         document.getElementById('playpausestate').innerHTML = 'Play';
         play = true
+
+        audio.pause()
     }
     
     else
