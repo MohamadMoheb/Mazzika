@@ -6,7 +6,8 @@ var trackIndex = 0;
 var playState;
 var Playlist = {};
 
-var audio = new Audio("/songs/Aziz-Maraka-Meen-Gallek.mp3");
+//Track Array
+const Tracks = ['Aziz Maraka - Meen Gallek', 'Cage The Elepant - Instant Crush', 'Gorillaz - Souk Eye']
 
 function PlayPrevious() {
     trackIndex--;
@@ -29,7 +30,7 @@ function PlayPause() {
         document.getElementById('playState').innerHTML = 'Play';
         playState = true
 
-        audio.pause()
+        track.pause()
     }
     
     else
@@ -37,6 +38,6 @@ function PlayPause() {
         document.getElementById('playState').innerHTML = 'Pause';
         playState =  false
         console.log("playing track now")
-        audio.play();
+        track.play();
     }
 }
