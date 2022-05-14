@@ -3,7 +3,8 @@ document.getElementById('PlayNext').addEventListener('click', PlayNext);
 document.getElementById('PlayPause').addEventListener('click', PlayPause);
 
 var trackIndex = 0;
-var play;
+var playState;
+var Playlist = {};
 
 var audio = new Audio("/songs/Aziz-Maraka-Meen-Gallek.mp3");
 
@@ -23,21 +24,19 @@ function PlayPause() {
 
     trackIndex = 0
 
-    console.log("Play/Pause Pressed")
-
-    if (play == false)
+    if (playState == false)
     {
-        document.getElementById('playpausestate').innerHTML = 'Play';
-        play = true
+        document.getElementById('playState').innerHTML = 'Play';
+        playState = true
 
         audio.pause()
     }
     
     else
     {
-        document.getElementById('playpausestate').innerHTML = 'Pause';
-        play =  false
-        
+        document.getElementById('playState').innerHTML = 'Pause';
+        playState =  false
+        console.log("playing track now")
         audio.play();
     }
 }
