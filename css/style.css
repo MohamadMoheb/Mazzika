@@ -1,0 +1,24 @@
+body{
+    background-color: #16161a;
+    color: #94a1b2;
+}
+
+.homepagetitle{
+    color: #2cb67d;
+    text-align: center;
+}
+
+.bodytext{
+    font-size:56px;
+}
+
+.navbutton{
+    border: none;
+    background-color: #7f5af0;
+    size: 410px;
+   
+}
+
+.navgroup{
+    text-align: center;
+}
