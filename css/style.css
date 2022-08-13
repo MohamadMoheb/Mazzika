@@ -15,8 +15,8 @@ body{
 .navbutton{
     border: none;
     background-color: #7f5af0;
-    size: 410px;
-   
+    height: 50px;
+   width: 150px;
 }
 
 .navgroup{
