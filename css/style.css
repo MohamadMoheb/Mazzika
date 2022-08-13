@@ -16,7 +16,8 @@ body{
     border: none;
     background-color: #7f5af0;
     height: 50px;
-   width: 150px;
+    width: 150px;
+    margin: 7px;
 }
 
 .navgroup{
